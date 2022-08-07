@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(34, 157, 205);">
+    <div class="container" >
+      <h1 class="center-align">My Contacts</h1>
+      <input type="text" id="FiterInput" placeholder="Search Name">
+
+      <ul id="names" class="collection with-header">
+        <li class="collection-header">
+          <h5>Contact List</h5>
+        </li>
+        <li class="collection-item">
+            <a href="#">Amelia</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Ava</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Alexander</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Avery</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Asher</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Aiden</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Anthony</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Abigail</a>
+        </li>
+
+        <!-- 333333333333333333333333333333333 -->
+
+        <li class="collection-item">
+            <a href="#">Emma </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Evelyn </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Emily </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Elijah </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Ethan </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Ezra </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Benjamin</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Bryson</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Brooks</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Bentley	</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Brandon</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Brayden</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Bennett
+            </a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Caleb</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Colton</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Connor</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Carson</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Cole</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Daniel</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">David</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Dylan.
+            </a>
+        </li>
+
+        <li class="collection-item">
+            <a href="#">Dominic</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Delilah</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Declan</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Krishiv</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Kriyansh</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Kiaan</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Krithvik</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Mateo</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Mia</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Michael</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Mila</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Maverick</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Nolan</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Madison</a>
+        </li>
+     
+
+
+      </ul>
+      <!-- <ul id="names" class="collection with-header">
+        <li class="collection-header">
+          <h5>B</h5>
+        </li>
+        <li class="collection-item">
+            <a href="#">BBA</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">BBC</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">BBD</a>
+        </li>
+
+      </ul>
+      
+      <ul id="names" class="collection with-header">
+        <li class="collection-header">
+          <h5>C</h5>
+        </li>
+        <li class="collection-item">
+            <a href="#">CCA</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">CCB</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">CCD</a>
+        </li>
+
+      </ul> -->
+    </div>
+
+    <script>
+        let filterInputs= document.getElementById('FiterInput');
+        filterInputs.addEventListener('keyup',fiterNames)
+
+        function fiterNames(){
+            // console.log(1);
+            let filterValue= document.getElementById('FiterInput').value.toUpperCase();
+            // console.log(filterValue);
+            let namesUl= document.getElementById('names')
+            let li=namesUl.querySelectorAll('li.collection-item')
+            
+
+            for(let i=0;i<li.length;i++)
+            {
+                let a = li[i].getElementsByTagName('a')[0];
+
+                if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+
+                    li[i].style.display=''
+                }
+                else{
+                    li[i].style.display='none'
+
+                }
+            }
+
+        }
+    </script>
+  </body>
+</html>
